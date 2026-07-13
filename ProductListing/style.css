@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+header {
+    background: #0077cc;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filters select {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-content p {
+    margin: 8px 0;
+    color: #666;
+}
+
+.price {
+    font-size: 20px;
+    color: #0077cc;
+    font-weight: bold;
+}
+
+.rating {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px;
+    border: none;
+    background: #0077cc;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #005fa3;
+}
+
+.no-products {
+    text-align: center;
+    font-size: 22px;
+    color: red;
+    grid-column: 1/-1;
+}
+
+@media(max-width:768px) {
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters select {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:500px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+}
